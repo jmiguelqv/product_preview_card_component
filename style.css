@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+:root{
+   /* ### Primary*/
+
+--DarkCyan: hsl(158, 36%, 37%);
+--VeryDarkCyan: hsl(158, 54%, 21%);
+--Cream: hsl(30, 38%, 92%);
+
+/* ### Neutral */
+
+--VeryDarkBlue: hsl(212, 21%, 14%);
+--DarkGrayishBlue: hsl(228, 12%, 48%);
+--White: hsl(0, 0%, 100%);
+--Fraunces: 'Fraunces', serif;/*700*/
+--Montserrat: 'Montserrat', sans-serif;/*500 700*/
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+font-size: 14px;
+background-color: var(--Cream);
+font-family: var(--Montserrat);
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+main{
+    background-color: var(--White);
+    border-radius: 10px;
+    margin: 30px auto;
+    width: 375px;
+    overflow: hidden;
+}
+
+.image{
+    background-image: url(images/image-product-mobile.jpg);
+    background-size: cover;
+    width: 375px;
+    height: 240px;
+
+}
+.details{
+    margin: 28px;
+
+}
+h2{
+    text-transform: uppercase;
+    
+    font-weight: 500;
+    font-size: 0.8em;
+    color: var(--DarkGrayishBlue);
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+}
+
+h1{
+    font-family: var(--Fraunces);
+    font-size: 2.5em;
+    color: var(--VeryDarkBlue);
+    margin-bottom: 20px;
+}
+
+p{
+    
+    font-size: 1.09em;
+    color:var(--DarkGrayishBlue);
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+.prices{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    
+}
+
+.current-price{
+    color: var(--DarkCyan);
+    font-family: var(--Fraunces);
+    font-size: 2.5em;
+    margin-right: 15px;
+}
+
+.before-price{
+    text-decoration: line-through;
+    color: var(--DarkGrayishBlue);
+}
+
+button{
+    background-color: var(--DarkCyan);
+    display: block;
+    text-align: center;
+    margin: 0 auto 25px;
+    border-radius: 10px;
+    height: 48px;
+    border-style: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    width: 294px;
+}
+
+button img{
+    margin: 0 20px;
+}
+
+/*footer*/
+.attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+
+@media (min-width:900px){
+    main{
+        width: 600px;
+        display: flex;
+        height: 450px;
+    }
+    .image{
+        background-image: url(images/image-product-desktop.jpg);
+        width: 300px;
+        height: 450px;
+    }
+    .details{
+        width: 300px;
+
+    }
+    h1{
+        font-size: 2.9em;
+    }
+    p{
+        font-size: 1.2em;
+        margin-bottom: 10px;
+    }
+    button:hover{
+        background-color: var(--VeryDarkCyan);
+        cursor: pointer;
+    }
+}
